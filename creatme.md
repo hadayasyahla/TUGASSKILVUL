@@ -74,28 +74,56 @@
 * ### CSS
     
     * CSS adalah Cascading Style Sheets yaitu suatu bahasa style sheet yang digunakan untuk mengstyle/mempercantik sebuah tampilan html
+    * perannya untuk mempercantik atau memberi kulit pada tampilan dari halaman website yang sebelumnya sudah diberi kerangka html
     * cara menyisipkan CSS ke dalam HTML 
     1. inline yaitu menyisipkan css di dalam sebuah opening tag suatu elemen  `<h1 style="color:blue;">Selmat pagi</h1>`
     2. internal yaitu menyisipkan css didalam html akan tetapi berada di bagian head dengan menggunakan sebuah tag `<style></style>`
     3. eksternal yaitu menyisipkan css diluar halaman html dengan cara memanggil dengan menggunakan `<link rel="stylesheet" href="styles.css" />` href diisi dengan alamat file cssnya
+    * CSS Syntax
+    ```CSS
+    selector {
+        property : value;
+    }
+    ```
+    * responsive css bisa menggunakan media query atau bisa juga menggunakan col (grid view)
+    * flex box
+        * yaitu untuk mengatur layout, posisi, dan ukuran dari tiap element di dalamnya
+        * display: flex yaitu untuk mendefinisikan wadah yang flexibel
 ## day5
 * ### algoritma
     * perbedaan antara Algoritma dan Data Structures , Struktur data adalah cara penyimpanan , pengorganisasian , dan pengaturan data di dalam media penyimpanan komputer sehingga data tersebut dapat digunakan secara efisien. Algoritma adalah sederetan langkah-langkah logis yang disusun secara sistematis untuk memecahkan suatu masalah
+    * Kegunaan algoritma dan data structur
+        * kegunaan struktur data yaitu untuk memudahkan dalam konsep algoritma sehingga logika program menjadi lebih terstruktur
+        * kegunaan algoritma yaitu untuk memecahkan suatu masalah dan dapat membantu menyederhanakan program yang rumit
 
-    * Ciri ciri Algoritma
-    1. input yaitu memiliki 0 atau lebih inputan
-    2. output yaitu memiliki minimal 1 output
-    3. Definiteness yaitu instruksinya jelas tidak ambigu
-    4. Finitness yaitu memiliki titik berhenti (stop)
-    5. Effectiveness yaitu sebisa mungkin tepat sasaran dan efisien
+    * Contoh algoritma
+        * Menentukan bilangan genap atau ganjil
+            1. mulai
+            2. deklarasi variabel
+            3. input nilai bilangan
+            4. lakukan pengecekan dengan modulus jika sisa bagi hasilnya 0 maka tampilkan  genap, kalau sisa bagi hasilnya 1 maka tampilkan bilangan ganjil
+            5. selesai
 
+    * Contoh implementasi algoritma ke bahasa javascript
+        ```Javascript
+            function ganjilGenap(i) {
+                if (i % 2 === 0) {
+                    return("genap")
+                }else{
+                    return("ganjil")
+                }
+            }
+            console.log(ganjilGenap(2));
+        ```
+
+    * contoh struktur data
+        ```Javascript
+        let hewan = ['kucing', 'kambing', 'ayam','sapi'];
+        // untuk memanggil misalnya ayam, maka bisa menggunakan
+        console.log(hewan[2])
+        ```
     * Big O natation adalah Big-O Notation adalah sebuah cara atau metode untuk melakukan analisa terhadap sebuah algoritma pemrograman terhadap waktu eksekusi
 
-    * Jenis jenis Algoritma
-    1. Sequence yaitu instruksi yang dijalankan secara berurutan
-    2. Selection yaitu instruksi yang dijalankan memenuhi suatu kondisi
-    3. Iteration yaitu instruksi yang berulang kali dijalankan selama memenuhi suatu kondisi
-    4. Concurent yaitu instruksi yang diajalankan secara bersamaan
 
     * Cara Penyajian Algoritma
     1. Deskriptif yaitu penyajian algoritma dengan menggunakan bahasa sehari hari
@@ -106,8 +134,65 @@
 ## day6
 * ### java script
 
-    * scope adalah suatu konsep yang digunakan untuk membatasi pengaksesan suatu variabel. Ada dua tipe scope yaitu lokal dan global. Global variables adalah variabel yang dideklarasikan di luar blok
-    * Fungsi ?
+    * JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Google Chrome, Internet Explorer, Mozilla Firefox, Netscape dan Opera. Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag script
+    * Javascript bisa digunakan untuk membuat fitur beragam seperti drag, drop komponen yang semuanya bisa bermanfaat untuk meningkatkan tampilan (interface) dan pengalaman menggunakan web.
+    * cara menjalankan javascript harus menempel di html, jadi yang pertama buat index.html lalu didalamnya yaitu di dalam tag body di tambahkan tag script dan hubungkan ke file javascriptnya, lalu untuk menjalankan bisa menjalankan index.html lalu klik kanan di web browser dan pilih inspect lalu pilih konsol
     * Cara Menyisipkan javascript
     1. Internal Javascript yaitu menyisipkan kode javascript langsung didalam file HTML
     2. External Javascript yaitu menyisipkan Kode javascript terpisah dari file HTMLnya, biasanya nanti akan dipanggil di tag `<script></script>` di `<head></head>` atau di `<body></body>` 
+    * Tipe data
+        ![](https://pbs.twimg.com/media/EM2pyP-VUAEYWLE.jpg)
+        1. string yaitu tipe data yang diapit dengan petik dua (""), petik 1 ('') dan backtik  `let nama = "Anggit"`
+        2. number yaitu tipe data yang isinya berupa angka `let number = 10;`
+        3. boolean yaitu tipe data yang isinya true atau false
+        4. null yaitu tipe data yang diartikan tidak memiliki nilai, biasanya diperoleh dalam kondisi normal atau sudah direncanakan
+        5. undefined yaitu tipe data yang mempresentasikan variabel/data yang tidak memiliki nilai, biasanya didapat dari hasil kesalahan program(error) dan tidak di rencanakan
+        6. object yaitu koleksi data yang saling berhubungan, dapat menyimpan berbagai mcam tipe data
+            ``` Javascript
+            let karyawan = {
+                nama: "lita",
+                umur: 21,
+            }
+            ```
+    * Operator
+        1. Tambah `+`
+        2. Kurang `-`
+        3. Perkalian `*`
+        4. Pembagian `/`
+        5. Modulus `%`
+        6. lebih kecil dari `<`
+        7. lebih besar dari `>`
+        8. lebih kecil atau sama dengan `<=`
+        9. lebih besar atau sama dengan `>=`
+        10. sama dengan dicek nilainya saja `==`
+        11. tidak sama dengan di cek nilainya saja `!=`
+        12. sama dengan tiga dicek nilai dan tipe datanya `===`
+        13. tidak sama dengan dicek nilai dan tipe datanya `!==`
+        14. AND operator `&&` semua harus true agar bernilai true, jika salah satunya false maka nilainya jadi false
+        15. OR operator `||` salah satu true maka hasilnya true
+        16. NOT operator `!` akan membalikan nilai boolean true menjadi false dan sebaliknya
+    
+    * pengkondisian adalah statement percabangan yang menggambarkan suatu kondisi, jika kondisi terpenuhi atau true maka kode didalamnya akan dijalankan, contoh pengkondisian diantaranya:
+        1. if else
+        2. if elseif
+        3. switch case
+    * contoh pengkondisian
+        ```Javascript
+        let lampu = true;
+        if (lampu) {
+            console.log('lampu menyala')
+        } else {
+            console.log('lampu mati')
+        }
+        ```
+    * Looping adalah statement yang mengulang sebuah instruksi sampai kondisi terpenuhi atau berhenti tercapai
+        1. for
+        2. while
+        3. do while
+
+    * Contoh looping
+        ```Javascript
+        let angka = 1;
+        for (angka; angka <= 10; angka++ ){
+            console.log(angka);
+        }
