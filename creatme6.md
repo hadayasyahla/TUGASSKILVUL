@@ -8,7 +8,7 @@
 3. React JS itu scalable yaitu dapat digunakan pada aplikasi berskala kecil hingga besar dan kompleks
 4. React JS itu popular dan komunitasnya besar
 
-## * Menjalankan Aplikasi react
+## * Menjalankan react
 * untuk membuat atau menjalankan react bisa menggunakan `npx create-react-app namaprojet` pada terminal lalu cd nama projectnya dan untuk menjalankan menggunakan `npm start`, lalu bisa juga menggunakan vite js yaitu caranya ketik `npm create vite@latest nama-project --template react` di terminal lalu akan ada konfirmasi bisa pilih `y` lalu sudah membuat projectnya bisa pindah direktori ke projectnya `cd nama-project` setelah itu intal dependencies menggunakan `npm install` dan untuk menjalankan bisa menggunakan `npm run dev`
 
 
